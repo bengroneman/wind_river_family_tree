@@ -13,16 +13,20 @@ class Ui_Dialog(object):
         Dialog.setObjectName("Dialog")
         Dialog.resize(1117, 668)
         self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(990, 50, 81, 81))
+        self.buttonBox.setGeometry(QtCore.QRect(900, 570, 81, 81))
         self.buttonBox.setOrientation(QtCore.Qt.Vertical)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Apply|QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
-        self.tableView = QtWidgets.QTableView(Dialog)
-        self.tableView.setGeometry(QtCore.QRect(0, 110, 941, 571))
-        self.tableView.setObjectName("tableView")
         self.toolButton = QtWidgets.QToolButton(Dialog)
-        self.toolButton.setGeometry(QtCore.QRect(890, 50, 51, 41))
+        self.toolButton.setGeometry(QtCore.QRect(340, 30, 101, 41))
+        self.toolButton.setCheckable(True)
+        self.toolButton.setChecked(False)
         self.toolButton.setObjectName("toolButton")
+        self.tableWidget = QtWidgets.QTableWidget(Dialog)
+        self.tableWidget.setGeometry(QtCore.QRect(0, 100, 881, 571))
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(0)
+        self.tableWidget.setRowCount(0)
 
         self.retranslateUi(Dialog)
         self.buttonBox.accepted.connect(Dialog.accept)
@@ -32,5 +36,5 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.toolButton.setText(_translate("Dialog", "...File"))
+        self.toolButton.setText(_translate("Dialog", "Upload File"))
 
